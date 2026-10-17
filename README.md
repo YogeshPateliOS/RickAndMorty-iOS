@@ -8,13 +8,13 @@ SwiftUI app (iOS 17+) using the [Rick and Morty API](https://rickandmortyapi.com
 - Detail screen with image, name, status, species, gender and current location
 
 ## Screenshots
-| List | Search | Detail |
-| --- | --- | --- |
-| <img src="docs/screenshots/list.png" width="240"> | <img src="docs/screenshots/search.png" width="240"> | <img src="docs/screenshots/detail.png" width="240"> |
+| Splash | List | Search | Detail |
+| --- | --- | --- | --- |
+| <img src="docs/screenshots/splash.png" width="200"> | <img src="docs/screenshots/list.png" width="200"> | <img src="docs/screenshots/search.png" width="200"> | <img src="docs/screenshots/detail.png" width="200"> |
 
-App icon and launch screen are original artwork (a green portal swirl), not taken from the show.
+App icon on the home screen:
 
-<img src="docs/screenshots/app-icon.png" width="90" alt="App icon">
+<img src="docs/screenshots/app-icon.png" width="140" alt="App icon">
 
 ## Structure
 ```
