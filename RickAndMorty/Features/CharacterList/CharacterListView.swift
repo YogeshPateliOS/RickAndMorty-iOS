@@ -3,16 +3,18 @@ import SwiftUI
 struct CharacterListView: View {
     @State private var viewModel: CharacterListViewModel
     @State private var searchText = ""
+    private let makeDetailViewModel: (CharacterModel) -> CharacterDetailViewModel
 
-    init(viewModel: CharacterListViewModel) {
+    init(viewModel: CharacterListViewModel, makeDetailViewModel: @escaping (CharacterModel) -> CharacterDetailViewModel) {
         _viewModel = State(initialValue: viewModel)
+        self.makeDetailViewModel = makeDetailViewModel
     }
 
     var body: some View {
         NavigationStack {
             content
                 .navigationTitle("Characters")
-                .navigationDestination(for: CharacterModel.self) { CharacterDetailView(character: $0) }
+                .navigationDestination(for: CharacterModel.self) { CharacterDetailView(viewModel: makeDetailViewModel($0)) }
                 .searchable(text: $searchText, prompt: "Search by name")
         }
         .task(id: searchText) {

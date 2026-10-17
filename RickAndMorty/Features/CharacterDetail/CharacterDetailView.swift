@@ -1,32 +1,63 @@
 import SwiftUI
 
 struct CharacterDetailView: View {
-    let character: CharacterModel
+    @State private var viewModel: CharacterDetailViewModel
+
+    init(viewModel: CharacterDetailViewModel) {
+        _viewModel = State(initialValue: viewModel)
+    }
+
+    private var character: CharacterModel { viewModel.character }
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
+        List {
+            Section {
                 CharacterImage(url: character.imageURL)
                     .aspectRatio(1, contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .frame(maxWidth: 420)
-
-                VStack(spacing: 0) {
-                    DetailRow(title: "Status", value: character.status.title, dotColor: character.status.color)
-                    Divider()
-                    DetailRow(title: "Species", value: character.species)
-                    Divider()
-                    DetailRow(title: "Gender", value: character.gender)
-                    Divider()
-                    DetailRow(title: "Location", value: character.locationName)
-                }
-                .padding(.horizontal)
-                .background(.background.secondary, in: RoundedRectangle(cornerRadius: 16))
+                    .frame(maxWidth: .infinity)
+                    .listRowInsets(EdgeInsets())
+                    .listRowBackground(Color.clear)
             }
-            .padding()
+
+            Section {
+                DetailRow(title: "Status", value: character.status.title, dotColor: character.status.color)
+                DetailRow(title: "Species", value: character.species)
+                DetailRow(title: "Gender", value: character.gender)
+                DetailRow(title: "Location", value: character.locationName)
+            }
+
+            episodes
         }
         .navigationTitle(character.name)
         .navigationBarTitleDisplayMode(.large)
+        .task {
+            do { try await viewModel.loadEpisodes() } catch { }
+        }
+    }
+
+    @ViewBuilder
+    private var episodes: some View {
+        switch viewModel.state {
+        case .loading:
+            Section("Episodes") {
+                ProgressView().frame(maxWidth: .infinity)
+            }
+        case .loaded(let sections):
+            ForEach(sections) { section in
+                Section("Season \(section.season)") {
+                    ForEach(section.episodes) { EpisodeRow(episode: $0) }
+                }
+            }
+        case .failed(let message):
+            Section("Episodes") {
+                Text(message).foregroundStyle(.secondary)
+                Button("Try Again") {
+                    Task { try? await viewModel.loadEpisodes() }
+                }
+            }
+        }
     }
 }
 
@@ -46,7 +77,6 @@ private struct DetailRow: View {
             Text(value)
                 .multilineTextAlignment(.trailing)
         }
-        .padding(.vertical, 12)
         .accessibilityElement(children: .combine)
     }
 }
@@ -62,5 +92,10 @@ private extension CharacterStatus {
 }
 
 #Preview {
-    NavigationStack { CharacterDetailView(character: .sample) }
+    NavigationStack {
+        CharacterDetailView(viewModel: CharacterDetailViewModel(
+            character: .sample,
+            repository: EpisodeRepository(service: APIService())
+        ))
+    }
 }
