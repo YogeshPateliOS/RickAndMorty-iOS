@@ -7,6 +7,15 @@ SwiftUI app (iOS 17+) using the [Rick and Morty API](https://rickandmortyapi.com
 - Search by name with debounce
 - Detail screen with image, name, status, species, gender and current location
 
+## Screenshots
+| List | Search | Detail |
+| --- | --- | --- |
+| <img src="docs/screenshots/list.png" width="240"> | <img src="docs/screenshots/search.png" width="240"> | <img src="docs/screenshots/detail.png" width="240"> |
+
+App icon and launch screen are original artwork (a green portal swirl), not taken from the show.
+
+<img src="docs/screenshots/app-icon.png" width="90" alt="App icon">
+
 ## Structure
 ```
 View -> ViewModel -> Repository -> Service -> URLSession
