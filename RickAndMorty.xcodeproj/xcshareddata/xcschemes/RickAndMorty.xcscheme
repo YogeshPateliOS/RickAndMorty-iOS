@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68D3532AD5FD8DBF6E4DA2E7"
+               BlueprintIdentifier = "4A336EE32EA3FECF2885FE12"
                BuildableName = "RickAndMorty.app"
                BlueprintName = "RickAndMorty"
                ReferencedContainer = "container:RickAndMorty.xcodeproj">
@@ -30,7 +30,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68D3532AD5FD8DBF6E4DA2E7"
+            BlueprintIdentifier = "4A336EE32EA3FECF2885FE12"
             BuildableName = "RickAndMorty.app"
             BlueprintName = "RickAndMorty"
             ReferencedContainer = "container:RickAndMorty.xcodeproj">
@@ -53,7 +53,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68D3532AD5FD8DBF6E4DA2E7"
+            BlueprintIdentifier = "4A336EE32EA3FECF2885FE12"
             BuildableName = "RickAndMorty.app"
             BlueprintName = "RickAndMorty"
             ReferencedContainer = "container:RickAndMorty.xcodeproj">
@@ -70,7 +70,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68D3532AD5FD8DBF6E4DA2E7"
+            BlueprintIdentifier = "4A336EE32EA3FECF2885FE12"
             BuildableName = "RickAndMorty.app"
             BlueprintName = "RickAndMorty"
             ReferencedContainer = "container:RickAndMorty.xcodeproj">
