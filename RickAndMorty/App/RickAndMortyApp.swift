@@ -2,9 +2,11 @@ import SwiftUI
 
 @main
 struct RickAndMortyApp: App {
+    private let repository: CharacterRepositoryProtocol = CharacterRepository(service: APIService())
+
     var body: some Scene {
         WindowGroup {
-            Text("Rick and Morty")
+            CharacterListView(viewModel: CharacterListViewModel(repository: repository))
         }
     }
 }
