@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "51A233E11A47658ED411A533"
+               BlueprintIdentifier = "52571B9CFED28551E5163B0E"
                BuildableName = "RickAndMorty.app"
                BlueprintName = "RickAndMorty"
                ReferencedContainer = "container:RickAndMorty.xcodeproj">
@@ -30,7 +30,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "51A233E11A47658ED411A533"
+            BlueprintIdentifier = "52571B9CFED28551E5163B0E"
             BuildableName = "RickAndMorty.app"
             BlueprintName = "RickAndMorty"
             ReferencedContainer = "container:RickAndMorty.xcodeproj">
@@ -41,7 +41,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FCA2B143580A15963AA29C8A"
+               BlueprintIdentifier = "CE1CEE9B194F39EA57AAE817"
                BuildableName = "RickAndMortyTests.xctest"
                BlueprintName = "RickAndMortyTests"
                ReferencedContainer = "container:RickAndMorty.xcodeproj">
@@ -63,7 +63,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "51A233E11A47658ED411A533"
+            BlueprintIdentifier = "52571B9CFED28551E5163B0E"
             BuildableName = "RickAndMorty.app"
             BlueprintName = "RickAndMorty"
             ReferencedContainer = "container:RickAndMorty.xcodeproj">
@@ -80,7 +80,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "51A233E11A47658ED411A533"
+            BlueprintIdentifier = "52571B9CFED28551E5163B0E"
             BuildableName = "RickAndMorty.app"
             BlueprintName = "RickAndMorty"
             ReferencedContainer = "container:RickAndMorty.xcodeproj">
