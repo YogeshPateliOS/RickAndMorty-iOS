@@ -22,9 +22,9 @@ App icon on the home screen:
 View -> ViewModel -> Repository -> Service -> URLSession
 ```
 - `Core/Networking`: `ServiceEndPoint`, `ServiceProtocol`, `APIService`, `NetworkError`
-- `Data`: `CharactersEndpoint`, response types (match the JSON) and `CharacterRepository`
-- `Models`: `CharacterModel`, the type the UI uses. Response types are mapped to it with `toModel()`
-- `Features`: list and detail screens
+- `Data`: `CharactersEndpoint`, `EpisodesEndpoint`, response types (match the JSON), `CharacterRepository` and `EpisodeRepository`
+- `Models`: `CharacterModel` and `EpisodeModel`, the types the UI uses. Response types are mapped to them with `toModel()`
+- `Features`: list and detail screens, each with its own view model
 - `Shared`: image and small reusable views
 
 There is no use case layer. The view model would only forward calls to the repository, so I left it out.
