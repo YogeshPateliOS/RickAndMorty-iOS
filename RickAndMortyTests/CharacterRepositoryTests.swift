@@ -6,7 +6,7 @@ final class CharacterRepositoryTests: XCTestCase {
         let json = """
         {"results":[{"id":1,"name":"Rick Sanchez","status":"Alive","species":"Human","gender":"Male",
         "image":"https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-        "episode":["e1","e2","e3"],"location":{"name":"Citadel of Ricks"}}]}
+        "episode":["https://rickandmortyapi.com/api/episode/1","https://rickandmortyapi.com/api/episode/2","https://rickandmortyapi.com/api/episode/3"],"location":{"name":"Citadel of Ricks"}}]}
         """
         let service = StubService(result: .success(try JSONDecoder().decode(CharactersResponse.self, from: Data(json.utf8))))
         let sut = CharacterRepository(service: service)

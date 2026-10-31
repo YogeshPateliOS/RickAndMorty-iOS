@@ -4,7 +4,7 @@ import XCTest
 @MainActor
 final class CharacterListViewModelTests: XCTestCase {
     private let rick = CharacterModel(id: 1, name: "Rick", status: .alive, species: "Human", gender: "Male",
-                                 imageURL: nil, episodeCount: 5, locationName: "Earth")
+                                 imageURL: nil, episodeIDs: [1, 2, 3, 4, 5], locationName: "Earth")
 
     func testLoadsCharacters() async {
         let sut = CharacterListViewModel(repository: MockRepository(result: .success([rick])))

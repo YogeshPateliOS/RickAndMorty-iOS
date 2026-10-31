@@ -28,7 +28,7 @@ extension CharacterResponse {
             species: species,
             gender: gender,
             imageURL: URL(string: image),
-            episodeCount: episode.count,
+            episodeIDs: episode.compactMap { URL(string: $0)?.lastPathComponent }.compactMap(Int.init),
             locationName: location.name
         )
     }
