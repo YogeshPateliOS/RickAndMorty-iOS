@@ -9,9 +9,9 @@ SwiftUI app (iOS 17+) using the [Rick and Morty API](https://rickandmortyapi.com
 - Episodes on the detail screen, grouped by season
 
 ## Screenshots
-| Splash | List | Search | Detail |
-| --- | --- | --- | --- |
-| <img src="docs/screenshots/splash.png" width="200"> | <img src="docs/screenshots/list.png" width="200"> | <img src="docs/screenshots/search.png" width="200"> | <img src="docs/screenshots/detail.png" width="200"> |
+| Splash | List | Search | Detail | Episodes |
+| --- | --- | --- | --- | --- |
+| <img src="docs/screenshots/splash.png" width="160"> | <img src="docs/screenshots/list.png" width="160"> | <img src="docs/screenshots/search.png" width="160"> | <img src="docs/screenshots/detail.png" width="160"> | <img src="docs/screenshots/detail-episodes.png" width="160"> |
 
 App icon on the home screen:
 
